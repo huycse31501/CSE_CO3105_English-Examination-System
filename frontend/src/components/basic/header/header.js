@@ -1,15 +1,19 @@
 import React from 'react';
-import './header.css'; 
-import main from './main.jpg';
+import './header.css';
+import logo from './logo.png';
 
 function HomepageHeader(props) {
-    return (
-        <div>
-            <div className="header-container-2">
-                <img src={main} alt="company logo" className="logo" />
-            </div>
+  return (
+    <div>
+      <div className="header">
+        <div className="header__left">
+          <img src={logo} alt="logo" className="logo" />
+          <h1 className="logo__text">English Examination System</h1>
         </div>
-    );
+        <div className="header__right"></div>
+      </div>
+    </div>
+  );
 }
 
 export default HomepageHeader;

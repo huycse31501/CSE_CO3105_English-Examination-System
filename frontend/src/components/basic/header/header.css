@@ -1,29 +1,27 @@
-.header-container-2{
-    position: absolute;
-    padding: 0px 50px; 
-    width:100%;
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px; 
+    width:80%;
+    margin: auto;
 }
 .logo{
-    width:100px;
-    margin-left: 50px;
-    margin-top: 50px;
+    width:82px;
+    height: 88px;
 }
-.header-container .logo,.header-container .navigation{
-    display: inline;
+.header__left {
+    display: flex;
+    justify-content: space-between;
 }
-.navigation{
-    list-style: none;
-    position: relative;
-    right:50px;
-    float: right;
-    top:50px;
-}
-.navigation li{
-    display: inline;
-    color: aliceblue;
-    font-size: 17px;
-    
-}
-.p{
-    padding-right:50px;
+.logo__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 32px;
+    text-transform: capitalize;
+    color: #3907FF;
 }
