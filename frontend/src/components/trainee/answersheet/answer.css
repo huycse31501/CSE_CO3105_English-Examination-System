@@ -10,8 +10,9 @@ and (max-device-width : 1024px)
     text-align: center;
 }
 .answer-table-outer{
-    width:100%;
-    padding:50px
+    width:80%;
+    margin: auto;
+    padding: 50px;
 }
 .feedbackFormHolder{
     width:50%;

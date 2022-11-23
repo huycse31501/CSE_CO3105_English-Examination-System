@@ -10,6 +10,7 @@ var userschema = new mongoose.Schema(
     username: {
       required: true,
       type: String,
+      unique: true,
     },
     password: {
       required: true,
@@ -18,7 +19,7 @@ var userschema = new mongoose.Schema(
     emailid: {
       required: true,
       type: String,
-      // unique: true,
+      unique: true,
     },
     contact: {
       required: true,

@@ -16,7 +16,8 @@
 .Test-portal-not-started-yet-inner{
     width:50%;
     min-height: 200px;
-    background: linear-gradient(to right,rgb(80,190,189),rgb(0,153,153),rgb(0,153,203));
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
     margin-left: 25%;
     position: absolute;
     top:50%;
@@ -37,8 +38,10 @@
     padding:50px 5%;
 }
 .instruction-page-inner{
+    background-color: white;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
     width:100%;
-    border:3px solid rgb(0,153,203);
     border-radius: 5px;
     padding:10px;
 }

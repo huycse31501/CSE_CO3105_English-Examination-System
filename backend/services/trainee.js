@@ -1,19 +1,14 @@
 var TraineeEnterModel = require('../models/trainee');
 var TestPaperModel = require('../models/testpaper');
 var FeedbackModel = require('../models/feedback');
-var sendmail = require('../services/mail').sendmail;
 var QuestionModel = require('../models/questions');
 var options = require('../models/option');
 var AnswersheetModel = require('../models/answersheet');
 var AnswersModel = require('../models/answers');
 
 let traineeenter = (req, res, next) => {
-  req.check('emailid', ` Invalid email address.`).isEmail().notEmpty();
   req.check('name', 'This field is required.').notEmpty();
-  req
-    .check('contact', 'Invalid contact.')
-    .isLength({ min: 13, max: 13 })
-    .isNumeric({ no_symbols: false });
+  req.check('contact', 'Invalid contact.').isNumeric({ no_symbols: false });
   var errors = req.validationErrors();
   if (errors) {
     res.json({
@@ -22,21 +17,19 @@ let traineeenter = (req, res, next) => {
       errors: errors,
     });
   } else {
+    var username = req.body.username;
     var name = req.body.name;
     var emailid = req.body.emailid;
     var contact = req.body.contact;
     var organisation = req.body.organisation;
     var testid = req.body.testid;
     var location = req.body.location;
-
+    console.log('Backend print', req.body);
     TestPaperModel.findOne({ _id: testid, isRegistrationavailable: true })
       .then((info) => {
         if (info) {
           TraineeEnterModel.findOne({
-            $or: [
-              { emailid: emailid, testid: testid },
-              { contact: contact, testid: testid },
-            ],
+            $or: [{ emailid: emailid, testid: testid }],
           }).then((data) => {
             if (data) {
               res.json({
@@ -45,6 +38,7 @@ let traineeenter = (req, res, next) => {
               });
             } else {
               var tempdata = TraineeEnterModel({
+                username: username,
                 name: name,
                 emailid: emailid,
                 contact: contact,
@@ -55,22 +49,11 @@ let traineeenter = (req, res, next) => {
               tempdata
                 .save()
                 .then((u) => {
-                  sendmail(
-                    emailid,
-                    'Registered Successfully',
-                    `You have been successfully registered for the test. Click on the link given to take test  "${
-                      req.protocol + '://' + req.get('host')
-                    }/trainee/taketest?testid=${testid}&traineeid=${u._id}"`
-                  )
-                    .then((dd) => {
-                      console.log(dd);
-                    })
-                    .catch((errr) => {
-                      console.log(errr);
-                    });
                   res.json({
                     success: true,
-                    message: `Trainee registered successfully!`,
+                    message: `${
+                      req.protocol + '://' + req.get('host')
+                    }/trainee/taketest?testid=${testid}&traineeid=${u._id}`,
                     user: u,
                   });
                 })
@@ -217,6 +200,8 @@ let checkFeedback = (req, res, next) => {
 
 let resendmail = (req, res, next) => {
   var userid = req.body.id;
+  console.log(`req.protocol + '://' + req.get('host')
+}/trainee/taketest?testid=${info.testid}&traineeid=${info._id}`);
   TraineeEnterModel.findById(userid, { emailid: 1, testid: 1 }).then((info) => {
     if (info) {
       console.log(info);
