@@ -1,8 +1,0 @@
-{
-  "mongodb": {
-    "connectionString": "mongodb+srv://anduckhmt146:123@quizapp.ksp9dy2.mongodb.net/?retryWrites=true&w=majority"
-  },
-  "jwt": {
-    "secret": "Examination Portal Application"
-  }
-}
