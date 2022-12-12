@@ -36,7 +36,7 @@ var results = require('./routes/results');
 var dummy = require('./routes/dummy');
 
 //configs
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, './frontend/build')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -44,6 +44,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //passport
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(cors());
 
 //bind routes
 app.use(
@@ -88,7 +89,14 @@ app.use('/api/v1/lala', dummy);
 app.use('/api/v1/login', login);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/public/index.html'));
+  res.sendFile(
+    path.join(__dirname + './frontend/build/index.html'),
+    function (err) {
+      if (err) {
+        res.status(500).send(err);
+      }
+    }
+  );
 });
 
 //error handlings
