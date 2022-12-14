@@ -1,7 +1,13 @@
 const envoirnment = process.env.NODE_ENV;
 const apis = {
-  BASE_LOCAL_URL: envoirnment === 'development' ? 'http://localhost:3000' : '',
-  BASE: envoirnment === 'development' ? 'http://localhost:5000' : '',
+  BASE_LOCAL_URL:
+    envoirnment === 'development'
+      ? 'https://nodejs-project.herokuapp.com/'
+      : '',
+  BASE:
+    envoirnment === 'development'
+      ? 'https://nodejs-project.herokuapp.com/'
+      : '',
   LOGIN: '/api/v1/login/',
   GETDETAILSUSER: '/api/v1/user/details',
   GET_ALL_TRAINER: '/api/v1/admin/trainer/details/all',
