@@ -1,5 +1,7 @@
 # Online Examination System
 
+An online examination system allow teacher and student to create and assign exam.
+
 # Key features:
     1. User management
     2. Modular code
