@@ -13,4 +13,4 @@ An online examination system allow teacher and student to create and assign exam
  
 # Link demo
 
-Website has been deployed at https://ems-frontend-deploy.onrender.com/
+This project has been deployed at https://ems-frontend-deploy.onrender.com/
