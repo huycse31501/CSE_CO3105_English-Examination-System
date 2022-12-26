@@ -1,4 +1,4 @@
-# Online Examination System
+# English Examination System
 
 An online examination system allow teacher and student to create and assign exam.
 
@@ -13,4 +13,4 @@ An online examination system allow teacher and student to create and assign exam
  
 # Link demo
 
-This project has been deployed at https://ems-frontend-deploy.onrender.com/
+EMS website has been deployed at https://ems-frontend-deploy.onrender.com/
