@@ -10,6 +10,14 @@ An online examination system allow teacher and student to create and assign exam
     5. Examination results using graphs
     6. Results can directly be downloaded as excel sheet
     7. Feedback system
+    
+# Tech Stack
+
+* Architecture: MERN (MongoDB - Express - React - Node)
+* Frontend: ReactJS, Redux Toolkit
+* Backend: NodeJS, ExpressJS
+* DBMS: MongoDB
+
  
 # Link demo
 
