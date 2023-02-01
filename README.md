@@ -1,6 +1,6 @@
 # English Examination System
 
-An English Examination System (using MERN) in subject Programming Intergration Project - Information System (CO3105) at HCMUT which allow teachers and
+An English Examination System (using MERN) in subject Programming Intergration Project - Information System (CO3105) at HCMUT which allows teachers and
 students create and do test. 
 
 # Tech Stack
