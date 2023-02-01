@@ -1,16 +1,8 @@
 # English Examination System
 
-An online examination system allow teacher and student to create and assign exam.
+An English Examination System (using MERN) in subject Programming Intergration Project - Information System (CO3105) at HCMUT which allow teachers and
+students create and do test. 
 
-# Key features:
-    1. User management
-    2. Modular code
-    3. Permission management
-    4. Persistent answers on page refresh in the test portal
-    5. Examination results using graphs
-    6. Results can directly be downloaded as excel sheet
-    7. Feedback system
-    
 # Tech Stack
 
 * Architecture: MERN (MongoDB - Express - React - Node)
@@ -18,7 +10,41 @@ An online examination system allow teacher and student to create and assign exam
 * Backend: NodeJS, ExpressJS
 * DBMS: MongoDB
 
- 
-# Link demo
+# Use case
+![image](https://user-images.githubusercontent.com/86992472/216091394-209be9fe-8c5f-4f1f-be3f-c5f17a0195f5.png)
+
+# User Interface
+
+Here is some main UI of this projects, more details you can experience in this deployed website.
+
+## Admin
+
+![image](https://user-images.githubusercontent.com/86992472/216093452-2d2daee1-b346-45bb-b269-0c52a7079d7f.png)
+
+## Teacher
+
+![image](https://user-images.githubusercontent.com/86992472/216094658-5babab53-4b51-4064-82cb-4a05f83985aa.png)
+
+##  Student
+
+![image](https://user-images.githubusercontent.com/86992472/216094995-e58f86bc-26a2-40b6-8d92-bff29abdb99f.png)
+
+# Guideline
+In the first step, you can log in to admin account with the following sample admin account.
+
+    username: ducan1406
+    password: admin
+    
+From admin account, you can create teacher account, please don't worry, this app is connected to a my MongoDB Database Sever Node.
+
+The explaination of how to use this system could be found in our report or the following presentation.
+
+# Presentation
+
+Here is my presentation of this project, you will see in my channel. If you find it interesting, please give me a like for my efforts.
+
+Link youtube: https://youtu.be/H7sTejKxQvY
+
+# Deployment
 
 EMS website has been deployed at https://ems-frontend-deploy.onrender.com/
