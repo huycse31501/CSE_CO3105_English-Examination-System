@@ -31,10 +31,10 @@ Here is some main UI of this projects, more details you can experience in this d
 
 # Guideline
 In the first step, you can log in to admin account with the following sample admin account.
-
+```bash
     username: ducan1406
     password: admin
-    
+```
 From admin account, you can create teacher account, please don't worry, this app is connected to a my MongoDB Database Sever Node.
 
 The explaination of how to use this system could be found in our report or the following presentation.
