@@ -47,7 +47,7 @@ Link youtube: https://youtu.be/H7sTejKxQvY
 
 # Result
 
-Grade: 9.5/10.
+* Grade: 9.5/10.
 
 # Deployment
 
