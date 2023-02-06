@@ -45,6 +45,10 @@ Here is my presentation of this project, you will see in my channel. If you find
 
 Link youtube: https://youtu.be/H7sTejKxQvY
 
+# Evaluation
+
+Grade: 9.5/10.
+
 # Deployment
 
 EMS website has been deployed at https://ems-frontend-deploy.onrender.com/
