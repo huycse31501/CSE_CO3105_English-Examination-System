@@ -3,6 +3,11 @@
 An English Examination System (using MERN) in subject Programming Intergration Project - Information System (CO3105) at HCMUT which allows teachers and
 students create and do test. 
 
+#Our report for the project: 
+[Đồ án HTTT.pdf](https://github.com/huycse31501/CSE_CO3105_English-Examination-System/files/10776418/D.an.HTTT.pdf)
+
+
+
 # Tech Stack
 
 * Architecture: MERN (MongoDB - Express - React - Node)
